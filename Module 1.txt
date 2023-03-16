@@ -1,0 +1,17 @@
+What is Software Development Life Cycle?
+There are six phases in Software Development Life Cycle
+1. Requirement gathering
+2. Analysis
+3. Designing 
+4. Coding
+5. Testing
+6. Maintenance
+
+
+What are the types of Applications? 
+
+What is programming?
+Programming is 
+
+What is Python? 
+Python is a high level, interpreted and object oriented programming language
