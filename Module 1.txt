@@ -1,4 +1,8 @@
-What is Software Development Life Cycle?
+What is SDLC?
+SDLC is Software Development Life Cycle
+
+
+What are the types of Applications? 
 There are six phases in Software Development Life Cycle
 1. Requirement gathering
 2. Analysis
@@ -7,11 +11,8 @@ There are six phases in Software Development Life Cycle
 5. Testing
 6. Maintenance
 
-
-What are the types of Applications? 
-
 What is programming?
-Programming is 
+Programming is technical process for telling a computer which tasks to perform in order to solve problems
 
 What is Python? 
 Python is a high level, interpreted and object oriented programming language
