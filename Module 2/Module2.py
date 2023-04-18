@@ -21,6 +21,21 @@ for a in range(a,0,-1):
 print(f"{factorial}")
 
 #Write a Python program to get the Fibonacci series of given range.
+Series_num = int(input("Enter the quantity of numbers you want in the fibonacci series :- "))
+fibonacci = []
+start_num = 1
+
+for Series_num in range(0,Series_num-1,1):
+    if fibonacci == []:
+        fibonacci.append(1)
+        fibonacci.append(1)
+    last_two_sum = fibonacci[-1] + fibonacci[-2]
+    fibonacci.append(last_two_sum)
+
+print(fibonacci)
+
+
+
 
 #How memory is managed in Python?
 
@@ -97,6 +112,10 @@ str_1 = input("Enter a string : ")
 print("The length of the entered string is ", len(str_1))
 
 #Write a Python program to count the number of characters (character frequency) in a string
+mystr=input("Enter a string :- ")
+
+mystr.count('p')
+print("P:-" , mystr.count('P'))
 
 
 #What are negative indexes and why are they used?
@@ -108,9 +127,14 @@ myStr = 'This is a great horse. It is black in color. It is 4 years Old'
 print(myStr.count('is'))
 
 #Write a Python program to count the occurrences of each word in a given sentence
-myStr = 'This is a great horse. It is black in color. It is 4 years Old'
-stringList = myStr.split()
-count = 0
+myStr = input("Enter a string :- ")
+list = []
+list=myStr.split()
+
+for p in list:
+    frequency = [list.count(p)]
+
+print(dict(zip(list, frequency)))
 
 
 print(f"The largest word is {largestWord} and the length is {length}")
