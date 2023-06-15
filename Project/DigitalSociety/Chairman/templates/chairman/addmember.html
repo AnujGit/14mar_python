@@ -1,0 +1,123 @@
+﻿{% extends 'chairman/index.html'%}
+{%load static%}
+ 
+{% block content %}     
+<section class="content home">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <h2>Add Society Member <small class="text-muted">Welcome to Digital Society</small></h2>
+                    </div>            
+                    <div class="col-lg-7 col-md-7 col-sm-12 text-right">
+                        
+                        
+                        
+                        <ul class="breadcrumb float-md-right">
+                            <li class="breadcrumb-item"><a href="..\dashboard\index.html"><i class="zmdi zmdi-home"></i> Digital Society</a></li>
+                                                                                        <li class="breadcrumb-item active">Add Society Member</li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">                
+                
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        {% if msg %}
+                <div class="alert alert-success" role="alert">
+                {{msg}}</div>
+            {% endif %}
+        <div class="card">
+            <div class="header">
+                <h2><strong>Add</strong> Society Member</h2>
+                <ul class="header-dropdown">                            
+                    <li class="remove">
+                        <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <form method="POST" action="{% url 'addmember'%}" enctype="multipart/form-data">
+            {%csrf_token%}
+                <div class="body">
+                    <div class="row clearfix">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email" name="email">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Password" name="password">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="First Name" name="firstname">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Last Name" name="lastname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="House Number" name="housenumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Contact Number" name="contactnumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Blood Group" name="bloodgroup">  
+                            </div>                              
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="No. of Family members" name="family">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Vehicle Details" name="vehicledetails">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <textarea rows="4" class="form-control no-resize" placeholder="Job Description" name="jobdescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <textarea rows="4" class="form-control no-resize" placeholder="Job Address" name="jobaddress"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <input type="file" class="form-control" placeholder="Image" name="profileimage">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <input type="submit" class="btn btn-primary btn-round" value="Submit">
+                            <button type="submit" class="btn btn-default btn-round btn-simple">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+            </div>
+</section>
+{% endblock %} 
+               

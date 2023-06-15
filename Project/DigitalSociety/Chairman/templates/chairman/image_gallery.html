@@ -1,0 +1,44 @@
+﻿{% extends 'chairman/index.html'%}
+{%load static%}
+ 
+{% block content %} 
+<section class="content home">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <h2>Gallery <small class="text-muted">Welcome to Digital Society</small></h2>
+                    </div>            
+                    <div class="col-lg-7 col-md-7 col-sm-12 text-right">
+                        
+                        
+                        
+                        <ul class="breadcrumb float-md-right">
+                            <li class="breadcrumb-item"><a href="..\dashboard\index.html"><i class="zmdi zmdi-home"></i> Digital Society</a></li>
+                                                                                        <li class="breadcrumb-item active">Image Gallery</li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">                
+                <div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="header">
+                <h2><strong>Image Gallery</strong>  
+            </div>
+            <div class="body">
+                <div id="aniimated-thumbnials" class="list-unstyled row clearfix">
+                    {% for i in all_images %}
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 m-b-20"> <a href="{{i.pic.url}}"> <img class="img-fluid img-thumbnail" src="{{i.pic.url}}" alt=""> </a> </div>
+                        <a href="{% url 'deleteimage' pk=i.id %}"><i class="zmdi zmdi-delete"></i></a>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </section>
+
+{% endblock %} 
+               
