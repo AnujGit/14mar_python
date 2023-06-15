@@ -246,6 +246,17 @@ mylist = [(1,2),(3,4,5),(6,7,8,9),(10,11,12,13,14),(15,16,17,18,19,20)]
 #Write a Python program to combine two dictionary adding values for common keys.
 d1 = {'a': 100, 'b': 200, 'c':300} o d2 = {'a': 300, 'b': 200,’d’:400} Sample output: Counter ({'a': 400, 'b': 400,’d’: 400, 'c': 300}).
 
+d1={"a":100,"b":200,"c":300}
+d2={"a":300,"b":200,"d":400}
+
+for key in d2:
+    if key in d1:
+        d2[key] = d2[key] + d1[key]
+    else:
+        pass
+result = d1|d2
+print(result)
+
 #Write a Python program to print all unique values in a dictionary.
 
 
